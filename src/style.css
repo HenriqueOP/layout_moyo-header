@@ -1,3 +1,72 @@
 body {
   margin: 0;
+  background-color: #000;
+  --nav-link-color: #00acdc;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.img_logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__list :has(.nav__link):not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link:link {
+  display: inline-block;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 60px;
+  height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  color: #000;
+}
+
+.nav__link:visited {
+}
+
+.nav__link:hover {
+  color: var(--nav-link-color);
+}
+
+.nav__link:active {
+  color: var(--nav-link-color);
+}
+
+.is-active {
+  color: var(--nav-link-color);
+}
+
+.is-active::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--nav-link-color);
 }
